@@ -1,0 +1,37 @@
+@import "rsuite/dist/rsuite.css";
+body {
+  background-image: linear-gradient(white, white, black);
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+  background-attachment: fixed;
+}
+
+header ul {
+  list-style-type: none;
+}
+header ul li {
+  float: right;
+  margin: 0 auto;
+  margin-right: 3vw;
+}
+header ul li .rs-btn {
+  padding-top: 0;
+  background-color: transparent;
+  border: none;
+}
+header ul li .rs-btn .rs-dropdown-toggle-caret {
+  margin-top: -7px;
+}
+header ul li .rs-btn .rs-btn-subtle:active, header ul li .rs-btn .rs-btn-subtle:hover {
+  background-color: black;
+}
+header ul li .rs-btn .rs-dropdown-menu .rs.dropdown-menu-item-focus {
+  background-color: red;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,43 @@
+@import "rsuite/dist/rsuite.css";
+
+body {
+ background-image: linear-gradient(white,white,black);
+ background-repeat:no-repeat;
+ height:100%;
+ margin:0;
+ background-attachment:fixed;
+}
+header{
+	ul {
+   list-style-type: none;
+
+  li {
+   float: right;
+   margin: 0 auto;
+   margin-right: 3vw ;
+   
+  .rs-btn{
+   padding-top:0; 
+   background-color:transparent;
+   border:none;
+   .rs-dropdown-toggle-caret{
+	margin-top:-7px;
+}
+.rs-btn-subtle{
+	&:active,&:hover{
+	 background-color:black;
+	}}
+	.rs-dropdown-menu {.rs.dropdown-menu-item-focus{
+		background-color:red;
+  }}
+   }
+
+
+  }
+	}
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
