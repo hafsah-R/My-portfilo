@@ -7,7 +7,6 @@ import{Dropdown} from 'rsuite';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
 root.render(
 <div>
 <header>
