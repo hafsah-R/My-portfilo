@@ -1,35 +1,262 @@
-@import "rsuite/dist/rsuite.css";
-body {
-  background-image: linear-gradient(white, white, black);
-  background-repeat: no-repeat;
-  height: 100%;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(white, white, gray);
+  background-repeat: no-repeat;
+  background-position: bottom;
   background-attachment: fixed;
 }
 
-header ul {
-  list-style-type: none;
-}
-header ul li {
-  float: right;
-  margin: 0 auto;
-  margin-right: 3vw;
-}
-header ul li .rs-btn {
-  padding-top: 0;
-  background-color: transparent;
-  border: none;
-}
-header ul li .rs-btn .rs-dropdown-toggle-caret {
-  margin-top: -7px;
-}
-header ul li .rs-btn .rs-btn-subtle:active, header ul li .rs-btn .rs-btn-subtle:hover {
-  background-color: black;
-}
-header ul li .rs-btn .rs-dropdown-menu .rs.dropdown-menu-item-focus {
-  background-color: red;
+html {
+  font-family: "comic sans MS", curisve, sans-serif;
 }
 
+[data-theme=light] {
+  background-image: linear-gradient(white, white, gray);
+}
+
+[data-theme=dark] {
+  background-image: linear-gradient(black, gray, black);
+  background-attachment: unset;
+}
+[data-theme=dark] li, [data-theme=dark] h4 {
+  color: gray;
+}
+[data-theme=dark] footer .react-icons {
+  color: gray;
+}
+
+header nav-elements {
+  display: none;
+}
+header ul {
+  list-style-type: none;
+  margin-top: 2vw;
+  display: flex;
+  justify-content: right;
+}
+header ul a {
+  position: relative;
+  text-decoration: none;
+}
+header ul a:hover {
+  text-decoration: none;
+}
+header ul a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 70%;
+  height: 0.3vw;
+  bottom: -0.5vw;
+  left: 0;
+  background-color: #00b3b3;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+header ul a:hover::before {
+  transform: scaleX(1);
+}
+header ul li {
+  color: black;
+  display: inline;
+  margin: 0 auto;
+  margin-right: 3vw;
+  font-size: 1.2em;
+  font-family: "lucida console";
+}
+header ul button {
+  all: unset;
+}
+header ul data-theme {
+  background-color: black;
+}
+
+#Home {
+  display: flex;
+  flex-wrap: nowrap;
+}
+#Home div {
+  position: relative;
+  flex-grow: 1;
+  flex-basis: 20vw;
+}
+#Home h4 {
+  font-size: 1.5em;
+  margin: 20vw 10vw;
+  white-space: nowrap;
+}
+#Home img {
+  margin-left: -12vw;
+  margin-top: 10vw;
+  width: 30vw;
+}
+
+#skill {
+  display: flex;
+}
+#skill h4 {
+  font-size: 1.5em;
+  color: #00b3b3;
+  margin-left: 5vw;
+}
+#skill div {
+  margin: 7vw;
+  padding: 5vw;
+  background-color: white;
+}
+#skill div h5 {
+  font-size: 1.1em;
+}
+#skill div li {
+  font-size: 1.2em;
+}
+
+.project {
+  background-image: url("thickline.svg");
+  background-repeat: no-repeat;
+  background-position: -5vw;
+}
+.project h4 {
+  margin: 5vw;
+  font-size: 1.5em;
+  color: #00b3b3;
+}
+.project div:first-child {
+  grid-row: 1/span 2;
+}
+
+.projectParantContainer {
+  display: grid;
+  gap: 5vw;
+  grid-template-columns: auto auto auto;
+  margin-left: 10vw;
+  align-items: center;
+  width: 80%;
+}
+.projectParantContainer .projectContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.projectParantContainer .projectContainer img {
+  width: 100%;
+}
+.projectParantContainer .projectContainer .overlay {
+  width: 80%;
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  padding: 1.5vw;
+  font-size: 1em;
+}
+.projectParantContainer .projectContainer .overlay:hover {
+  opacity: 0.9;
+}
+.projectParantContainer .projectContainer .overlay a {
+  color: black;
+  word-wrap: normal;
+}
+
+footer {
+  /**hr{
+   border-bottom:10px solid transparent;
+   padding:1vw;
+   border-image:url(thickline.svg) 5% fill;
+   width:100%;
+  }*/
+}
+footer div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 6vw;
+  height: 20vh;
+  min-height: 10vh;
+}
+footer div a {
+  margin-top: auto;
+  color: inherit;
+}
+footer div a :hover {
+  color: white;
+}
+footer div .react-icons {
+  font-size: 1.7em;
+}
+
+/**/
+.navbar {
+  display: flex;
+  justify-content: right;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-elements ul li:not(:last-child) {
+    /*  margin-right: 30px;*/
+  }
+}
+@media (max-width: 600px) {
+  .menu-icon {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    margin: 5vw;
+  }
+  .menu-icon .react-icons {
+    font-size: 1.7em;
+    color: #00b3b3;
+  }
+
+  .nav-elements {
+    background-color: white;
+    position: absolute;
+    right: 0;
+    width: 0vw;
+    height: 100vh;
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+  }
+
+  .nav-elements.active {
+    width: 30vw;
+  }
+
+  .nav-elements ul {
+    flex-direction: column;
+    column-gap: 5vw;
+    row-gap: 5vw;
+  }
+
+  #Home {
+    flex-wrap: nowrap;
+  }
+  #Home h4 {
+    white-space: normal;
+    position: absolute;
+    margin-left: 20vw;
+  }
+  #Home img {
+    margin: unset;
+    width: 50vw;
+  }
+
+  #skill {
+    flex-flow: column nowrap;
+  }
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
