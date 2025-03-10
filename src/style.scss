@@ -236,9 +236,7 @@ footer{
   justify-content: right;
 }
 
-.menu-icon {
-  display: none;
-}
+
 
 @media (max-width: 768px) {
   .nav-elements ul li:not(:last-child) {
@@ -247,7 +245,9 @@ footer{
 }
 
 @media (max-width: 600px) {
-  
+  .menu-icon {
+  display: none;
+}
  .menu-icon {
    display: flex;
    justify-content: flex-end;

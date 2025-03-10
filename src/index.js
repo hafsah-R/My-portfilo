@@ -28,11 +28,11 @@ const Navbar = () => {
      </div>
      <div className={`nav-elements  ${showNavbar && 'active'}`}>
       <ul>
-       <li> <TogglesDarkmodeAndLightmode /> </li>
        <a href="#Home"><li>Home</li></a>
        <a href="#skill"><li>Skill</li></a>
        <a href="#project"><li>Project</li></a>
        <a href="#footer"><li>Contact</li></a>
+	   <li> <TogglesDarkmodeAndLightmode /> </li>
       </ul> 
      </div>
    </nav>
