@@ -39,7 +39,7 @@ header ul {
   list-style-type: none;
   margin-top: 2vw;
   display: flex;
-  justify-content: right;
+  justify-content: space-evenly;
 }
 header ul a {
   position: relative;
@@ -55,7 +55,7 @@ header ul a::before {
   width: 70%;
   height: 0.3vw;
   bottom: -0.5vw;
-  left: 0;
+  right: 0;
   background-color: #00b3b3;
   transform: scaleX(0);
   transition: transform 0.3s ease;
@@ -67,7 +67,7 @@ header ul li {
   color: black;
   display: inline;
   margin: 0 auto;
-  margin-right: 3vw;
+  margin-left: 3vw;
   font-size: 1.2em;
   font-family: "lucida console";
 }
@@ -193,25 +193,22 @@ footer div .react-icons {
   font-size: 1.7em;
 }
 
-/**/
-.navbar {
+/*.navbar {
   display: flex;
   justify-content: right;
-}
-
+}*/
 @media (max-width: 768px) {
   .nav-elements ul li:not(:last-child) {
     /*  margin-right: 30px;*/
   }
 }
 @media (max-width: 600px) {
-  .menu-icon {
+  /*.menu-icon {
     display: none;
-  }
-
+  }*/
   .menu-icon {
     display: flex;
-    justify-content: flex-end;
+    justify-content: left;
     cursor: pointer;
     margin: 5vw;
   }
@@ -223,7 +220,8 @@ footer div .react-icons {
   .nav-elements {
     background-color: white;
     position: absolute;
-    right: 0;
+    left: 0;
+    z-index: 2;
     width: 0vw;
     height: 100vh;
     transition: all 0.3s ease-in;
