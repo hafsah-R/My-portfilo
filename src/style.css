@@ -31,10 +31,10 @@ html {
 [data-theme=dark] footer .react-icons {
   color: gray;
 }
-
-header nav-elements {
-  display: none;
+[data-theme=dark] .nav-elements {
+  background-color: #121214;
 }
+
 header ul {
   list-style-type: none;
   margin-top: 2vw;
@@ -166,14 +166,6 @@ header ul data-theme {
   word-wrap: normal;
 }
 
-footer {
-  /**hr{
-   border-bottom:10px solid transparent;
-   padding:1vw;
-   border-image:url(thickline.svg) 5% fill;
-   width:100%;
-  }*/
-}
 footer div {
   display: flex;
   justify-content: center;
@@ -193,19 +185,7 @@ footer div .react-icons {
   font-size: 1.7em;
 }
 
-/*.navbar {
-  display: flex;
-  justify-content: right;
-}*/
-@media (max-width: 768px) {
-  .nav-elements ul li:not(:last-child) {
-    /*  margin-right: 30px;*/
-  }
-}
-@media (max-width: 600px) {
-  /*.menu-icon {
-    display: none;
-  }*/
+@media only screen and (max-width: 600px) {
   .menu-icon {
     display: flex;
     justify-content: left;
@@ -227,15 +207,18 @@ footer div .react-icons {
     transition: all 0.3s ease-in;
     overflow: hidden;
   }
-
-  .nav-elements.active {
-    width: 30vw;
-  }
-
   .nav-elements ul {
     flex-direction: column;
     column-gap: 5vw;
     row-gap: 5vw;
+  }
+  .nav-elements ul a::before {
+    width: 50%;
+    left: 3vw;
+  }
+
+  .nav-elements.active {
+    width: 30vw;
   }
 
   #Home {
@@ -255,8 +238,15 @@ footer div .react-icons {
     flex-flow: column nowrap;
   }
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+@media only screen and (min-width: 600px) {
+  .menu-icon {
+    display: none;
+  }
 }
+/*@media (max-width: 768px) {
+  .nav-elements ul li:not(:last-child) {
+  /*  margin-right: 30px;
+  }
+}*/
 
 /*# sourceMappingURL=style.css.map */
