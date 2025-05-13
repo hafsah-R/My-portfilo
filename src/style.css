@@ -31,9 +31,6 @@ html {
 [data-theme=dark] footer .react-icons {
   color: gray;
 }
-[data-theme=dark] .nav-elements {
-  background-color: #121214;
-}
 
 header ul {
   list-style-type: none;
@@ -73,6 +70,9 @@ header ul li {
 }
 header ul button {
   all: unset;
+}
+header ul button:focus-visible {
+  outline: 2px solid red;
 }
 header ul data-theme {
   background-color: black;
@@ -184,6 +184,9 @@ footer div a :hover {
 footer div .react-icons {
   font-size: 1.7em;
 }
+footer div .react-icons:focus-visible {
+  outline: 2px solid red;
+}
 
 @media only screen and (max-width: 600px) {
   .menu-icon {
@@ -196,7 +199,6 @@ footer div .react-icons {
     font-size: 1.7em;
     color: #00b3b3;
   }
-
   .nav-elements {
     background-color: white;
     position: absolute;
@@ -216,11 +218,9 @@ footer div .react-icons {
     width: 50%;
     left: 3vw;
   }
-
   .nav-elements.active {
     width: 30vw;
   }
-
   #Home {
     flex-wrap: nowrap;
   }
@@ -233,7 +233,6 @@ footer div .react-icons {
     margin: unset;
     width: 50vw;
   }
-
   #skill {
     flex-flow: column nowrap;
   }
@@ -243,10 +242,5 @@ footer div .react-icons {
     display: none;
   }
 }
-/*@media (max-width: 768px) {
-  .nav-elements ul li:not(:last-child) {
-  /*  margin-right: 30px;
-  }
-}*/
 
 /*# sourceMappingURL=style.css.map */

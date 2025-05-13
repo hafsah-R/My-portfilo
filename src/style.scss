@@ -13,7 +13,7 @@ $font-family:"comic sans MS" ,curisve ,sans-serif;
 
 
 body{
- background-image: linear-gradient(white,white,gray);
+ background-image: linear-gradient($white-color,$white-color,gray);
  background-repeat:no-repeat;
  background-position:bottom;
  background-attachment:fixed;
@@ -25,7 +25,7 @@ html{
 
 
 [data-theme="light"] {
- background-image: linear-gradient(white,white,gray);
+ background-image: linear-gradient($white-color,$white-color,gray);
 }
 
 [data-theme="dark"] {
@@ -36,10 +36,6 @@ html{
  
  footer{
   .react-icons{color:gray;}
- }
- 
- .nav-elements {
-  background-color:#121214;
  }
  
 }
@@ -73,6 +69,7 @@ header{
 	&:hover::before {
 	 transform:scaleX(1);
     }
+	
  }
 	
   li {
@@ -85,6 +82,7 @@ header{
    }
   button{
 	all:unset;  
+	&:focus-visible{outline:2px solid red;}
   }
   data-theme{
 	  background-color:black;
@@ -194,7 +192,6 @@ header{
 	word-wrap:normal;
    }
   }
- 
  }
 }
 
@@ -217,13 +214,13 @@ footer{
   
  .react-icons{
   font-size:1.7em;
- }	
-}
- 
+  &:focus-visible{outline:2px solid red;}
+  }	
+ }
 }
   
-  
-@media only screen and (max-width:600px){
+$break-point:600px;
+@media only screen and (max-width:$break-point){
  .menu-icon {
   display: flex;
   justify-content: left;
@@ -252,10 +249,11 @@ footer{
 	left:3vw;
    }
   }
- }
- .nav-elements.active {
+  &.active {
   width: 30vw;
  }
+}
+ 
 
  #Home{
   flex-wrap:nowrap;
@@ -275,16 +273,10 @@ footer{
  }
 }
 
-@media only screen and (min-width:600px){
+@media only screen and (min-width:$break-point){
  .menu-icon {
   display: none;
  }
 }
-
-/*@media (max-width: 768px) {
-  .nav-elements ul li:not(:last-child) {
-  /*  margin-right: 30px;
-  }
-}*/
 
 
