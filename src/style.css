@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: linear-gradient(white, white, gray);
+  background-image: linear-gradient(white, white, #D3D3D3);
   background-repeat: no-repeat;
   background-position: bottom;
   background-attachment: fixed;
@@ -53,7 +53,7 @@ header ul a::before {
   height: 0.3vw;
   bottom: -0.5vw;
   right: 0;
-  background-color: #00b3b3;
+  background-color: #009090;
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -70,9 +70,6 @@ header ul li {
 }
 header ul button {
   all: unset;
-}
-header ul button:focus-visible {
-  outline: 2px solid red;
 }
 header ul data-theme {
   background-color: black;
@@ -103,7 +100,7 @@ header ul data-theme {
 }
 #skill h4 {
   font-size: 1.5em;
-  color: #00b3b3;
+  color: #009090;
   margin-left: 5vw;
 }
 #skill div {
@@ -126,7 +123,7 @@ header ul data-theme {
 .project h4 {
   margin: 5vw;
   font-size: 1.5em;
-  color: #00b3b3;
+  color: #009090;
 }
 .project div:first-child {
   grid-row: 1/span 2;
@@ -197,7 +194,7 @@ footer div .react-icons:focus-visible {
   }
   .menu-icon .react-icons {
     font-size: 1.7em;
-    color: #00b3b3;
+    color: #009090;
   }
   .nav-elements {
     background-color: white;

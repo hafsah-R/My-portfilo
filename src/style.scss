@@ -1,5 +1,5 @@
 $white-color:white;
-$Iris-Blue-color: #00b3b3;
+$Iris-Blue-color:#009090;
 $font-size:1.2em;
 $title-font-size:1.5em;
 $font-family:"comic sans MS" ,curisve ,sans-serif;
@@ -13,7 +13,7 @@ $font-family:"comic sans MS" ,curisve ,sans-serif;
 
 
 body{
- background-image: linear-gradient($white-color,$white-color,gray);
+ background-image: linear-gradient($white-color,$white-color,#D3D3D3);
  background-repeat:no-repeat;
  background-position:bottom;
  background-attachment:fixed;
@@ -82,7 +82,6 @@ header{
    }
   button{
 	all:unset;  
-	&:focus-visible{outline:2px solid red;}
   }
   data-theme{
 	  background-color:black;
@@ -175,7 +174,7 @@ header{
    width:100%;
    }
    
-  .overlay{
+  .overlay{ 
    width:80%;
    position: absolute;
    inset:0;

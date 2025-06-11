@@ -27,11 +27,11 @@ const Navbar = () => {
      </div>
      <div className={`nav-elements  ${showNavbar && 'active'}`}>
       <ul>
-       <a href="#Home"><li>Home</li></a>
+       <a href="#Home" ><li>Home</li></a>
        <a href="#skill"><li>Skill</li></a>
        <a href="#project"><li>Project</li></a>
        <a href="#footer"><li>Contact</li></a>
-	   <li> <TogglesDarkmodeAndLightmode/> </li>
+	   <li tabindex="0"> <TogglesDarkmodeAndLightmode/> </li>
       </ul> 
      </div>
    </nav>
@@ -54,7 +54,7 @@ function TogglesDarkmodeAndLightmode() {
   }, [theme]);
   
  return (
-  <button aria-label="Darkmod and lightmode button" onClick={() => {switchTheme(); toggleIcon();}}>
+  <button aria-label="Darkmod and lightmode button" onkeydown={() => {switchTheme(); toggleIcon();}}>
   { icon?(<MdLightMode title="lightmode"/>) : (<MdDarkMode title="Darkmode"/>) }
   </button>
   );
@@ -64,6 +64,7 @@ function TogglesDarkmodeAndLightmode() {
 const root = ReactDOM.createRoot(document.getElementById('root'));  
 root.render(
 <div>
+
 <header>
 <Navbar />
 </header>
@@ -156,7 +157,7 @@ root.render(
 <IconContext.Provider value={{className:"react-icons"}}>
 <a href="https://x.com/hafsah_rizg" aria-label="X link"><BsTwitterX title="x"/></a>
 <a href="https://github.com/hafsah-R" aria-label="github link"><BsGithub title="Github"/></a>
-<a href="https://sa.linkedin.com/in/hafsah-rizg-3143a1200" aria-label="linkedin link"><BsLinkedin title="likedin"/></a>
+<a href="https://sa.linkedin.com/in/hafsah-rizg-3143a1200" aria-label="linkedin link" ><BsLinkedin title="likedin"/></a>
 </ IconContext.Provider>
 </div>
 </footer>
