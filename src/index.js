@@ -11,7 +11,7 @@ import { MdDarkMode } from 'react-icons/md';
 import { MdLightMode } from 'react-icons/md';
 import { useState ,useEffect} from 'react';
 
-
+j
 //small device Navbar
 const Navbar = () => {
  const [showNavbar, setShowNavbar] = useState(false)
