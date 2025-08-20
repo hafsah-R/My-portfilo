@@ -2,65 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style.scss';
 import reportWebVitals from './reportWebVitals';
+import Navbar from './Navbar.js';
 import { IconContext } from "react-icons";
 import { BsTwitterX } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
-import { RxHamburgerMenu } from 'react-icons/rx'
-import { MdDarkMode } from 'react-icons/md';
-import { MdLightMode } from 'react-icons/md';
-import { useState ,useEffect} from 'react';
 
-j
-//small device Navbar
-const Navbar = () => {
- const [showNavbar, setShowNavbar] = useState(false)
- const handleShowNavbar = () => {
-  setShowNavbar(!showNavbar)
- }
- return (
-   <nav>
-    <div className="menu-icon" onClick={handleShowNavbar}>
-	 <IconContext.Provider value={{className:"react-icons"}}>
-      <RxHamburgerMenu />
-	  </IconContext.Provider>
-     </div>
-     <div className={`nav-elements  ${showNavbar && 'active'}`}>
-      <ul>
-       <a href="#Home" ><li>Home</li></a>
-       <a href="#skill"><li>Skill</li></a>
-       <a href="#project"><li>Project</li></a>
-       <a href="#footer"><li>Contact</li></a>
-	   <li tabindex="0"> <TogglesDarkmodeAndLightmode/> </li>
-      </ul> 
-     </div>
-   </nav>
-  )
-}
-
-
-function TogglesDarkmodeAndLightmode() {
- const [icon,setIcon]=useState(false);
- const toggleIcon =() => {setIcon((prev)=>!prev)}
- 
- const defaultDark = window.matchMedia("(prefers-color-scheme: light)").matches;
- const [theme, setTheme] = useState(defaultDark);
- const switchTheme = () => {
-  const newTheme = theme === "dark" ?  "light" :"dark" ;
-   setTheme(newTheme);
- }
- useEffect(() => {
-  document.body.setAttribute("data-theme", theme);
-  }, [theme]);
-  
- return (
-  <button aria-label="Darkmod and lightmode button" onkeydown={() => {switchTheme(); toggleIcon();}}>
-  { icon?(<MdLightMode title="lightmode"/>) : (<MdDarkMode title="Darkmode"/>) }
-  </button>
-  );
-}
-
-
+     
 const root = ReactDOM.createRoot(document.getElementById('root'));  
 root.render(
 <div>
@@ -102,7 +50,7 @@ root.render(
 
 <div className="projectParantContainer">
  <div className="projectContainer">
-  <img src="online tutoring.png" alt="online tutoring"/>
+  <img src="online tutoring.png" loading="lazy" alt="online tutoring"/>
   <div className="overlay">
    <a href="https://online-tutoring-home-page.vercel.app">
    HTML-SCSS-JS home page online tutoring website
@@ -111,7 +59,7 @@ root.render(
 </div>
 
 <div className="projectContainer">
- <img src="screenshot landin page.png" alt="landin page"/>
+ <img src="screenshot landin page.png"  loading="lazy" alt="landin page"/>
  <div className="overlay">
   <a href="https://github.com/hafsah-R/landing-page">
   HTML-CSS-JS landing page
@@ -120,7 +68,7 @@ root.render(
 </div>
 
 <div className="projectContainer">
- <img src="التقديم لمؤسسات التعليم العالي.png" alt="التقديم لمؤسسات التعليم العالي"/>
+ <img src="التقديم لمؤسسات التعليم العالي.png"  loading="lazy" alt="التقديم لمؤسسات التعليم العالي"/>
  <div className="overlay">
   <a href="https://application-for-higer-education-institutions.vercel.app/index.html">
   HTML-SCSS-JS application to sudan higher education institution
@@ -129,7 +77,7 @@ root.render(
 </div>
 
 <div className="projectContainer">
- <img src="pricing.png" alt="interactive pricing componen"/>
+ <img src="pricing.png"  loading="lazy" alt="interactive pricing componen"/>
  <div className="overlay">
   <a href="https://interactive-pricing-componen.vercel.app/">
   HTML-SASS-ReactJS Interactive pricing component
@@ -138,7 +86,7 @@ root.render(
 </div>
 
 <div className="projectContainer">
- <img src="randomQoute.png" alt="random qoute machine"/>
+ <img src="randomQoute.png"  loading="lazy" alt="random qoute machine"/>
  <div className="overlay">
   <a href="http://random-qoute-machine.vercel.app/">
   HTML-SCSS-JS random-qoute-machine
