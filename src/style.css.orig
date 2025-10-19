@@ -1,0 +1,249 @@
+/*Courier New,Courier,Lucida Sans Typewriter,Lucida Sans Typewriter,monospace;*/
+/*'courier New',monospace*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(white, white, #D3D3D3);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h4, header li {
+  font-family: "courier New", monospace;
+  font-weight: bold;
+}
+
+[data-theme=light] {
+  background-image: linear-gradient(white, white, gray);
+}
+
+[data-theme=dark] {
+  background-image: linear-gradient(black, gray, black);
+  background-attachment: unset;
+}
+[data-theme=dark] .nav-elements {
+  background-color: #0E0E0E;
+}
+[data-theme=dark] li, [data-theme=dark] h4 {
+  color: gray;
+}
+[data-theme=dark] footer .react-icons {
+  color: gray;
+}
+
+header ul {
+  list-style-type: none;
+  margin-top: 2vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+header ul a {
+  position: relative;
+  text-decoration: none;
+}
+header ul a:hover {
+  text-decoration: none;
+}
+header ul a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 70%;
+  height: 0.3vw;
+  bottom: -0.5vw;
+  right: 0;
+  background-color: black;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+header ul a:hover::before {
+  transform: scaleX(1);
+}
+header ul li {
+  color: #009090;
+  display: inline;
+  margin: 0 auto;
+  margin-left: 3vw;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+header ul button {
+  all: unset;
+}
+header ul data-theme {
+  background-color: black;
+}
+
+#Home {
+  display: flex;
+  flex-wrap: nowrap;
+}
+#Home div {
+  position: relative;
+  flex-grow: 1;
+  flex-basis: 20vw;
+}
+#Home h4 {
+  font-size: 1.5em;
+  margin: 20vw 10vw;
+  white-space: nowrap;
+}
+#Home img {
+  margin-left: -12vw;
+  margin-top: 10vw;
+  width: 30vw;
+}
+
+#skill {
+  display: flex;
+}
+#skill h4 {
+  font-size: 1.5em;
+  color: #009090;
+  margin-left: 5vw;
+}
+#skill div {
+  margin: 7vw;
+  padding: 5vw;
+  background-color: white;
+}
+#skill div h5 {
+  font-size: 1.1em;
+}
+#skill div li {
+  font-size: 1.2em;
+  color: black;
+}
+
+.project {
+  background-image: url("thickline.svg");
+  background-repeat: no-repeat;
+  background-position: -5vw;
+}
+.project h4 {
+  margin: 5vw;
+  font-size: 1.5em;
+  color: #009090;
+}
+.project div:first-child {
+  grid-row: 1/span 2;
+}
+
+.projectParantContainer {
+  display: grid;
+  gap: 5vw;
+  grid-template-columns: auto auto auto;
+  margin-left: 10vw;
+  align-items: center;
+  width: 80%;
+}
+.projectParantContainer .projectContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.projectParantContainer .projectContainer img {
+  width: 100%;
+}
+.projectParantContainer .projectContainer .overlay {
+  width: 80%;
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  padding: 1.5vw;
+  font-size: 1em;
+}
+.projectParantContainer .projectContainer .overlay:hover {
+  opacity: 0.9;
+}
+.projectParantContainer .projectContainer .overlay a {
+  color: black;
+  word-wrap: normal;
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 6vw;
+  height: 20vh;
+  min-height: 10vh;
+}
+footer div a {
+  margin-top: auto;
+  color: inherit;
+}
+footer div a :hover {
+  color: white;
+}
+footer div .react-icons {
+  font-size: 1.7em;
+}
+footer div .react-icons:focus-visible {
+  outline: 2px solid red;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu-icon {
+    display: flex;
+    justify-content: left;
+    cursor: pointer;
+    margin: 5vw;
+  }
+  .menu-icon .react-icons {
+    color: #009090;
+    font-size: 1.7em;
+  }
+  .nav-elements {
+    background-color: white;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    width: 0vw;
+    height: 100dvh;
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+  }
+  .nav-elements ul {
+    flex-direction: column;
+    column-gap: 5vw;
+    row-gap: 5vw;
+  }
+  .nav-elements ul a::before {
+    width: 50%;
+    left: 3vw;
+  }
+  .nav-elements.active {
+    width: 30vw;
+  }
+  #Home {
+    flex-wrap: nowrap;
+  }
+  #Home h4 {
+    white-space: normal;
+    position: absolute;
+    margin-left: 20vw;
+  }
+  #Home img {
+    margin: unset;
+    width: 50vw;
+  }
+  #skill {
+    flex-flow: column nowrap;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .menu-icon {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
