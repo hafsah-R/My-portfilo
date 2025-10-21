@@ -19,9 +19,9 @@ const Navbar = () => {
      <div className={`nav-elements  ${showNavbar && 'active'}`}>
       <ul>
        <li><a href="#Home" >Home</a></li>
-       <a href="#skill"><li>Skill</li></a>
-       <a href="#project"><li>Project</li></a>
-       <a href="#footer"><li>Contact</li></a>
+       <li><a href="#skill"><li>Skill</a></li>
+       <li><a href="#project">Project</a></li>
+       <li><a href="#footer">Contact</a></li>
 	   <li tabIndex="0"> < TogglesDarkmodeAndLightmode/> </li>
       </ul> 
      </div>
