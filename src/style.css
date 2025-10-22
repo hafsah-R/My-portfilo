@@ -41,11 +41,14 @@ header ul {
   list-style-type: none;
   margin-top: 2vw;
   display: flex;
-  justify-content: space-evenly;
 }
 header ul a {
+  color: #009090;
   position: relative;
   text-decoration: none;
+  display: inline;
+  margin: 0 auto;
+  margin-left: 3vw;
 }
 header ul a:hover {
   text-decoration: none;
@@ -54,7 +57,7 @@ header ul a::before {
   content: "";
   position: absolute;
   display: block;
-  width: 70%;
+  width: 100%;
   height: 0.3vw;
   bottom: -0.5vw;
   right: 0;
@@ -66,10 +69,7 @@ header ul a:hover::before {
   transform: scaleX(1);
 }
 header ul li {
-  color: #009090;
-  display: inline;
-  margin: 0 auto;
-  margin-left: 3vw;
+  margin-right: 3vw;
   font-size: 1.2em;
   font-weight: bold;
 }
@@ -238,6 +238,22 @@ footer div .react-icons:focus-visible {
   }
   #skill {
     flex-flow: column nowrap;
+  }
+  .project {
+    background-image: url("thickline.svg");
+    background-repeat: no-repeat;
+    background-position: -5vw;
+  }
+  .project h4 {
+    margin: 5vw;
+    font-size: 1.5em;
+    color: #009090;
+  }
+  .project div:first-child {
+    grid-row: 1/span 2;
+  }
+  .projectParantContainer .projectContainer .overlay {
+    font-size: 0.5em;
   }
 }
 @media only screen and (min-width: 600px) {
