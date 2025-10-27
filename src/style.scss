@@ -189,7 +189,7 @@ header{
    padding:1.5vw;
    font-size:.9em;
    white-space:nowrap;
-   text-overflow:ellipsis;
+   text-overflow:clip;
    overflow:auto;
    scrollbar-width:thin;
    &:hover {
