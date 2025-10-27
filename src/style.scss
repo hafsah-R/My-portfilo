@@ -187,11 +187,11 @@ header{
    opacity: 0;
    transition: opacity 0.5s ease-in-out;
    padding:1.5vw;
-   font-size:clamp(.8em,2vw + .8em,1em);
+   font-size:.9em;
+   white-space:nowrap;
    text-overflow:ellipsis;
    overflow:auto;
    scrollbar-width:thin;
-   scrollbar-color:#009090;
    &:hover {
     opacity:.9;
     }
