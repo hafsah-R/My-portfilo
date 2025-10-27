@@ -187,7 +187,11 @@ header{
    opacity: 0;
    transition: opacity 0.5s ease-in-out;
    padding:1.5vw;
-   font-size:1em;
+   font-size:clamp(.8em,2vw + .8em,1em);
+   text-overflow:ellipsis;
+   overflow:auto;
+   scrollbar-width:thin;
+   scrollbar-color:#009090;
    &:hover {
     opacity:.9;
     }
@@ -277,32 +281,7 @@ $break-point:600px;
   flex-flow:column nowrap;
  }
  
- .project{
- background-image:url("thickline.svg");
- background-repeat:no-repeat;
- background-position:-5vw;
  
- h4{
-  margin:5vw;
-  font-size:$title-font-size;
-  color:$Iris-Blue-color;
- }
- 
- div{	 
-  &:first-child{
-   grid-row:1/span 2;
-  } 
-  }
- }
-
-.projectParantContainer{
- .projectContainer{
-  .overlay{ 
-   font-size:.5em;
-  }
- }
-}
-
 }
 
 @media only screen and (min-width:$break-point){

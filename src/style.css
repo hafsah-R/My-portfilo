@@ -159,7 +159,11 @@ header ul data-theme {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   padding: 1.5vw;
-  font-size: 1em;
+  font-size: clamp(0.8em, 2vw + 0.8em, 1em);
+  text-overflow: ellipsis;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #009090;
 }
 .projectParantContainer .projectContainer .overlay:hover {
   opacity: 0.9;
@@ -238,22 +242,6 @@ footer div .react-icons:focus-visible {
   }
   #skill {
     flex-flow: column nowrap;
-  }
-  .project {
-    background-image: url("thickline.svg");
-    background-repeat: no-repeat;
-    background-position: -5vw;
-  }
-  .project h4 {
-    margin: 5vw;
-    font-size: 1.5em;
-    color: #009090;
-  }
-  .project div:first-child {
-    grid-row: 1/span 2;
-  }
-  .projectParantContainer .projectContainer .overlay {
-    font-size: 0.5em;
   }
 }
 @media only screen and (min-width: 600px) {
