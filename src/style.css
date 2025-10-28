@@ -160,10 +160,6 @@ header ul data-theme {
   transition: opacity 0.5s ease-in-out;
   padding: 1.5vw;
   font-size: 0.9em;
-  white-space: nowrap;
-  text-overflow: clip;
-  overflow: auto;
-  scrollbar-width: thin;
 }
 .projectParantContainer .projectContainer .overlay:hover {
   opacity: 0.9;
@@ -239,6 +235,11 @@ footer div .react-icons:focus-visible {
   #Home img {
     margin: unset;
     width: 50vw;
+  }
+  .projectParantContainer .overlay {
+    white-space: pre;
+    overflow: auto;
+    scrollbar-width: thin;
   }
   #skill {
     flex-flow: column nowrap;
