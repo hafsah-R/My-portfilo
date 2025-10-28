@@ -1,6 +1,6 @@
-HTML - SASS - ReactJS
+# HTML - SASS - ReactJS
 
-#color
+# Color
 ![Image](https://github.com/user-attachments/assets/0b2d1127-67fd-4983-9573-3bb07acea584)
 
 # Getting Started with Create React App
@@ -73,4 +73,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 
